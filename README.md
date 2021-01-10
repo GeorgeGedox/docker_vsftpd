@@ -19,6 +19,20 @@ docker pull georgegedox/vsftpd
 Environment variables
 ----
 
+* Variable name: `UID`
+* Default value: 50.
+* Accepted values: User ID.
+* Description: User id used by this container, if you have an existing directory owned by a user that you want FTP access to without changing the user on the host, grab that user's ID and use it for the container.
+
+----
+
+* Variable name: `GID`
+* Default value: 50.
+* Accepted values: Group ID.
+* Description: Same as the above, just for the group instead.
+
+----
+
 This image uses environment variables to allow the configuration of some parameters at run time:
 
 * Variable name: `FTP_USER`
