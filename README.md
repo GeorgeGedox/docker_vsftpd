@@ -137,7 +137,7 @@ Exposed ports and volumes
 
 The image exposes ports `20` and `21`. Also, exports two volumes: `/ftp`, which contains users home directories, and `/var/log/vsftpd`, used to store logs.
 
-When sharing a homes directory between the host and the container (`/ftp`) the owner user id and group id should be 14 and 50 respectively. This corresponds to ftp user and ftp group on the container, but may match something else on the host.
+When sharing a homes directory between the host and the container (`/ftp`) the owner user id and group id should be `50` for both but this can be changed by specifying the `UID` and `GID` environment variables to match a local user on the host.
 
 Use cases
 ----
